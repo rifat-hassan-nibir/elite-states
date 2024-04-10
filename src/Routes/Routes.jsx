@@ -13,6 +13,7 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("/estates-data.json"),
       },
       {
         path: "/blogs",
