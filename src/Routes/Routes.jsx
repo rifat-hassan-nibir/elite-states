@@ -1,9 +1,32 @@
 import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../MainLayout/MainLayout";
+import Home from "../Pages/Home";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import Blogs from "../Pages/Blogs";
 
 const Routes = createBrowserRouter([
   {
     path: "/",
-    element: <div>React Router + Tailwind + Daisy UI</div>,
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+    ],
   },
 ]);
 
