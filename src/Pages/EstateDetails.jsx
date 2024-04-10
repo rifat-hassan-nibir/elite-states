@@ -1,21 +1,29 @@
-/* eslint-disable react/prop-types */
+import { useLoaderData, useParams } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const EstatesCard = ({ estate }) => {
-  const { id, estate_title, image, segment_name, description, price, status, area, location, facilities } = estate;
+const EstateDetails = () => {
+  const { id } = useParams();
+  const idInt = parseInt(id);
+
+  const estatesData = useLoaderData();
+
+  const estate = estatesData.find((estate) => estate.id === idInt);
+
+  const { estate_title, image, segment_name, description, price, status, area, location, facilities } = estate;
+
   return (
-    <div className="mx-auto rounded-lg shadow-md">
-      <div className="relative">
-        <img src={image} className="h-[230px] rounded-t-lg" />
-        <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full absolute top-4">{segment_name}</p>
+    <div className="flex items-center mx-auto rounded-lg lg:max-w-[1000px]">
+      <div className="w-1/2">
+        <img src={image} className="rounded-t-lg flex flex-col" />
       </div>
       {/* Text Contents */}
-      <div className="p-5 space-y-[16px]">
+      <div className="p-5 space-y-[16px] w-1/2">
+        <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full ">{segment_name}</p>
         <div className="flex items-center justify-between">
-          <div className="space-y-3">
-            <p className="capitalize text-[14px] text-white font-medium bg-primary inline-block px-3 rounded-full">{status}</p>
+          <div>
+            <p className="capitalize text-[14px] text-white font-medium bg-primary inline-block px-3 rounded-full mb-2">{status}</p>
             <h3 className="text-[16px] font-bold">{estate_title}</h3>
           </div>
           <h2 className="text-primary lg:text-[20px] text-[18px] font-bold">{price}</h2>
@@ -43,16 +51,11 @@ const EstatesCard = ({ estate }) => {
         </div>
         <hr />
         <div className="">
-          <p className="text-[14px] text-[#4e5c79]">{description.slice(0, 70)}...</p>
-          <div className="text-right">
-            <Link to={`/estates/${id}`} className="bg-primary inline-block text-white text-[14px] font-semibold py-2 px-4 rounded-full">
-              Show Details
-            </Link>
-          </div>
+          <p className="text-[14px] text-[#4e5c79]">{description}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default EstatesCard;
+export default EstateDetails;
