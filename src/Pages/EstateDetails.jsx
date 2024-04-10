@@ -1,7 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineZoomOutMap } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 const EstateDetails = () => {
   const { id } = useParams();

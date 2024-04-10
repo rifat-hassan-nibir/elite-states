@@ -3,9 +3,10 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
-import Blogs from "../Pages/Blogs";
 import ErrorPage from "../Pages/ErrorPage";
 import EstateDetails from "../Pages/EstateDetails";
+import Blogs from "../Pages/Blogs";
+import BlogDetails from "../Components/HomePage/BlogDetails";
 
 const Routes = createBrowserRouter([
   {
@@ -21,6 +22,12 @@ const Routes = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+        loader: () => fetch("/blogs-data.json"),
+      },
+      {
+        path: "/blogs/:id",
+        element: <BlogDetails></BlogDetails>,
+        loader: () => fetch("/blogs-data.json"),
       },
       {
         path: "/login",
@@ -31,7 +38,7 @@ const Routes = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/estates/:id",
+        path: "/estate-details/:id",
         loader: () => fetch("/estates-data.json"),
         element: <EstateDetails></EstateDetails>,
       },

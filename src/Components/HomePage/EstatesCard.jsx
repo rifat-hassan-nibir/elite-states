@@ -8,7 +8,7 @@ const EstatesCard = ({ estate }) => {
   return (
     <div className="mx-auto rounded-lg shadow-md">
       <div className="relative">
-        <img src={image} className="h-[230px] rounded-t-lg" />
+        <img src={image} className=" rounded-t-lg" />
         <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full absolute top-4">{segment_name}</p>
       </div>
       {/* Text Contents */}
@@ -45,8 +45,8 @@ const EstatesCard = ({ estate }) => {
         <div className="">
           <p className="text-[14px] text-[#4e5c79]">{description.slice(0, 70)}...</p>
           <div className="text-right">
-            <Link to={`/estates/${id}`} className="bg-primary inline-block text-white text-[14px] font-semibold py-2 px-4 rounded-full">
-              Show Details
+            <Link to={`/estate-details/${id}`} className="bg-primary inline-block text-white text-[14px] font-semibold py-2 px-5 rounded-full">
+              View Property
             </Link>
           </div>
         </div>
