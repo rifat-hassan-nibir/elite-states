@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Modern Single-family Home with Pool",
+    "image": "https://r2.easyimg.io/jpz7pzq04/property-1.jpg",
+    "segment_name": "Single-family homes",
+    "description": "This beautiful modern single-family home boasts spacious living areas, a private pool, and stunning views. With sleek architectural design and luxurious finishes throughout, this residence offers the perfect blend of comfort and style. Ideal for families seeking an upscale living experience in the vibrant city of Los Angeles, California.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Los Angeles, California",
+    "facilities": ["living room", "swimming pool", "kitchen"]
+  },
+  {
+    "id": 2,
+    "estate_title": "Luxury Townhouse in Downtown",
+    "image": "https://r2.easyimg.io/jpz7pzq04/property-2.jpg",
+    "segment_name": "Townhouses",
+    "description": "Indulge in luxury living with this exquisite townhouse situated in the heart of bustling New York City. This spacious residence features upscale finishes and modern amenities, including a sleek kitchen and a rooftop terrace perfect for entertaining guests or enjoying peaceful city views. Experience the epitome of urban sophistication and convenience.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "New York City, New York",
+    "facilities": ["living room", "kitchen", "rooftop terrace"]
+  },
+  {
+    "id": 3,
+    "estate_title": "Modern Apartment with City Views",
+    "image": "https://r2.easyimg.io/jpz7pzq04/property-3.jpg",
+    "segment_name": "Apartments",
+    "description": "Welcome to your new home in the vibrant city of Chicago, Illinois. This contemporary apartment offers panoramic city views and an abundance of natural light. With modern amenities including a fully-equipped gym and convenient parking, this apartment provides the ultimate urban living experience.",
+    "price": "$3,000/month",
+    "status": "rent",
+    "area": "1000 sq ft",
+    "location": "Chicago, Illinois",
+    "facilities": ["living room", "gym", "parking"]
+  },
+  {
+    "id": 4,
+    "estate_title": "Student Housing Near University Campus",
+    "image": "https://r2.easyimg.io/jpz7pzq04/property-4.jpg",
+    "segment_name": "Student housing",
+    "description": "Conveniently located just minutes away from the bustling campus of Boston, Massachusetts, this student housing offers comfort and convenience. Fully furnished and equipped with essential amenities, this residence provides an ideal environment for focused study and comfortable living.",
+    "price": "$1,200/month",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "Boston, Massachusetts",
+    "facilities": ["bedroom", "study area", "laundry room"]
+  },
+  {
+    "id": 5,
+    "estate_title": "Senior Living Community with Amenities",
+    "image": "https://r2.easyimg.io/jpz7pzq04/property-5.jpg",
+    "segment_name": "Senior living communities",
+    "description": "Experience vibrant senior living in the sunny city of Miami, Florida. This active senior living community offers a range of amenities, including a community center, swimming pool, and lush gardens. Enjoy a fulfilling lifestyle surrounded by like-minded individuals in a welcoming and supportive environment.",
+    "price": "$400,000",
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": "Miami, Florida",
+    "facilities": ["community center", "swimming pool", "gardens"]
+  },
+  {
+    "id": 6,
+    "estate_title": "Luxurious Beachfront Vacation Rental",
+    "image": "https://r2.easyimg.io/jpz7pzq04/property-6.jpg",
+    "segment_name": "Vacation rentals",
+    "description": "Escape to paradise with this luxurious beachfront vacation rental in the breathtaking islands of Hawaii. Indulge in resort-style living with direct beach access, a private balcony overlooking the ocean, and a relaxing spa. Create unforgettable memories with your loved ones in this idyllic tropical retreat.",
+    "price": "$500/night",
+    "status": "rent",
+    "area": "2000 sq ft",
+    "location": "Hawaii, USA",
+    "facilities": ["beach access", "private balcony", "spa"]
+  }
+]
