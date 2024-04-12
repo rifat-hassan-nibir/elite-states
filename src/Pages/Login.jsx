@@ -12,7 +12,16 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const { email, password } = data;
+    loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800">

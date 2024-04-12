@@ -1,8 +1,23 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOutUser()
+      .then(() => {
+        console.log("Log out successful");
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="navbar bg-base-100 p-0 ">
       <div className="navbar-start">
@@ -42,10 +57,13 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="dropdown dropdown-end">
           <div tabIndex={0}>
-            <Link to="/login" className="btn bg-primary rounded-sm text-white flex items-center gap-4">
-              <FaRegUser />
-              Login
-            </Link>
+            <div>
+              <button onClick={handleLogOut} className="btn bg-primary rounded-sm text-white flex items-center gap-4">
+                <FaRegUser />
+                {user ? "Logout" : <Link to="/login">Login</Link>}
+              </button>
+            </div>
+
             {/* <FaRegCircleUser className="text-[20px]" /> */}
           </div>
           {/* <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
