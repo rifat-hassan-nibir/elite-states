@@ -1,28 +1,23 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+  const onSubmit = (data) => console.log(data);
 
-    loginUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
   return (
     <div className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800">
       <h1 className="text-2xl font-bold text-center">Login</h1>
-      <form onSubmit={handleLogin} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-1 text-sm">
           <label htmlFor="name" className="block text-gray-600">
             Email
@@ -32,9 +27,10 @@ const Login = () => {
             name="email"
             id="email"
             placeholder="Email"
-            required
+            {...register("email", { required: true })}
             className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
           />
+          {errors.email && <span className="text-red-400">This field is required</span>}
         </div>
         <div className="space-y-1 text-sm">
           <label htmlFor="password" className="block text-gray-600">
@@ -45,10 +41,12 @@ const Login = () => {
             name="password"
             id="password"
             placeholder="Password"
+            {...register("password", { required: true })}
             className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
           />
+          {errors.password && <span className="text-red-400">This field is required</span>}
         </div>
-        <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Register</button>
+        <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Login</button>
       </form>
       <div className="flex items-center pt-4 space-x-1">
         <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>

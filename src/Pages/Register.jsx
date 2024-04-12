@@ -1,15 +1,19 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
 
-  const handleRegister = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+  const onSubmit = (data) => {
+    const { email, password } = data;
 
     createUser(email, password)
       .then((result) => {
@@ -23,7 +27,7 @@ const Register = () => {
   return (
     <div className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800">
       <h1 className="text-2xl font-bold text-center">Register</h1>
-      <form onSubmit={handleRegister} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-1 text-sm">
           <label htmlFor="name" className="block text-gray-600">
             Name
@@ -33,8 +37,10 @@ const Register = () => {
             name="name"
             id="name"
             placeholder="Name"
+            {...register("name", { required: true })}
             className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
           />
+          {errors.name && <span className="text-red-400">This field is required</span>}
         </div>
         <div className="space-y-1 text-sm">
           <label htmlFor="name" className="block text-gray-600">
@@ -57,9 +63,10 @@ const Register = () => {
             name="email"
             id="email"
             placeholder="Email"
-            required
+            {...register("email", { required: true })}
             className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
           />
+          {errors.email && <span className="text-red-400">This field is required</span>}
         </div>
         <div className="space-y-1 text-sm">
           <label htmlFor="password" className="block text-gray-600">
@@ -70,9 +77,10 @@ const Register = () => {
             name="password"
             id="password"
             placeholder="Password"
-            required
+            {...register("password", { required: true })}
             className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
           />
+          {errors.password && <span className="text-red-400">This field is required</span>}
         </div>
         <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Register</button>
       </form>
