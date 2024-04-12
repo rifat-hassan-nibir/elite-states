@@ -12,11 +12,11 @@ const EstatesCard = ({ estate }) => {
         <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full absolute top-4">{segment_name}</p>
       </div>
       {/* Text Contents */}
-      <div className="p-5 space-y-[16px]">
+      <div className="p-5 space-y-[14px]">
         <div className="flex items-center justify-between">
-          <div className="space-y-3">
+          <div className="space-y-2">
             <p className="capitalize text-[14px] text-white font-medium bg-primary inline-block px-3 rounded-full">{status}</p>
-            <h3 className="text-[16px] font-bold">{estate_title}</h3>
+            <h3 className="text-[18px] font-bold">{estate_title}</h3>
           </div>
           <h2 className="text-primary lg:text-[20px] text-[18px] font-bold">{price}</h2>
         </div>
@@ -25,7 +25,7 @@ const EstatesCard = ({ estate }) => {
           <div>
             <h4 className="text-[14px] text-[#4e5c79] mb-1 font-semibold">Facilities:</h4>
             {facilities.map((facility, index) => (
-              <li className="capitalize ml-4 text-[14px] text-[#4e5c79]" key={index}>
+              <li className="capitalize ml-3 text-[13px] text-[#4e5c79]" key={index}>
                 {facility}
               </li>
             ))}
@@ -33,19 +33,22 @@ const EstatesCard = ({ estate }) => {
           <div className="flex flex-col items-end">
             <div className="flex items-center gap-2">
               <MdOutlineZoomOutMap className="text-[14px] text-[#4e5c79]" />{" "}
-              <p className="text-[14px] text-[#4e5c79] font-medium">{area}</p>
+              <p className="text-[13px] text-[#4e5c79] font-medium">{area}</p>
             </div>
             <div className="flex items-center gap-2">
               <CiLocationOn />
-              <p className="text-[14px] text-[#4e5c79] font-medium">{location}</p>
+              <p className="text-[13px] text-[#4e5c79] font-medium">{location}</p>
             </div>
           </div>
         </div>
         <hr />
         <div className="">
-          <p className="text-[14px] text-[#4e5c79]">{description.slice(0, 70)}...</p>
+          <p className="text-[13px] text-[#4e5c79]">{description.slice(0, 70)}...</p>
           <div className="text-right">
-            <Link to={`/estate-details/${id}`} className="bg-primary inline-block text-white text-[14px] font-semibold py-2 px-5 rounded-full">
+            <Link
+              to={`/estate-details/${id}`}
+              className="bg-primary inline-block text-white text-[14px] font-semibold py-2 px-5 rounded-full"
+            >
               View Property
             </Link>
           </div>

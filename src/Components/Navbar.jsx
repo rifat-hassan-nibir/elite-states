@@ -17,6 +17,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/blogs">Blogs</NavLink>
             </li>
+            <li>
+              <NavLink to="/update-profile">Update Profile</NavLink>
+            </li>
           </ul>
         </div>
         <Link to="/" className="text-xl">
@@ -30,6 +33,9 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/blogs">Blogs</NavLink>
+          </li>
+          <li>
+            <NavLink to="/update-profile">Update Profile</NavLink>
           </li>
         </ul>
       </div>

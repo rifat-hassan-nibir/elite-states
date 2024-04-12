@@ -7,6 +7,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import EstateDetails from "../Pages/EstateDetails";
 import Blogs from "../Pages/Blogs";
 import BlogDetails from "../Components/HomePage/BlogDetails";
+import UpdateProfile from "../Pages/UpdateProfile";
 
 const Routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const Routes = createBrowserRouter([
         path: "/blogs/:id",
         element: <BlogDetails></BlogDetails>,
         loader: () => fetch("/blogs-data.json"),
+      },
+      {
+        path: "/update-profile",
+        element: <UpdateProfile></UpdateProfile>,
       },
       {
         path: "/login",
