@@ -7,17 +7,6 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
-  const handleLogOut = () => {
-    logOutUser()
-      .then(() => {
-        console.log("Log out successful");
-        console.log(user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   return (
     <div className="navbar bg-base-100 p-0 ">
       <div className="navbar-start">
@@ -55,17 +44,25 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="flex items-center gap-4">
-          {user && (
-            <div className="bg-primary p-2 rounded-full">
-              <AiOutlineUser className="bg-primary text-white text-[18px]" title="user" />
-            </div>
-          )}
-
+        <div>
           {user ? (
-            <button onClick={handleLogOut} className="btn bg-primary rounded-sm text-white flex items-center gap-4">
-              Logout
-            </button>
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="p-2 bg-primary rounded-full text-white flex items-center">
+                {user?.photoURL ? (
+                  <img src={user.photoURL} alt="" />
+                ) : (
+                  <AiOutlineUser className="bg-primary text-white text-[18px]" title="user" />
+                )}
+              </div>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <a>User Profile</a>
+                </li>
+                <li>
+                  <a onClick={logOutUser}>Logout</a>
+                </li>
+              </ul>
+            </div>
           ) : (
             <Link to="/login" className="btn bg-primary rounded-sm text-white flex items-center gap-4">
               Login
