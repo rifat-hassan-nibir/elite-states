@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../Components/HomePage/Slider";
 import EstatesCard from "../Components/HomePage/EstatesCard";
+import Testimonial from "../Components/HomePage/Testimonial";
+import CallToAction from "../Components/HomePage/CallToAction";
 
 const Home = () => {
   const estates = useLoaderData();
@@ -8,7 +10,7 @@ const Home = () => {
     <div>
       <Slider></Slider>
       <div className="bg-[#F5FAFF] lg:py-[70px] py-[30px] lg:px-0 px-[15px]">
-        <h1 className="lg:text-[29px] text-[22px] font-bold text-center">Estates</h1>
+        <h1 className="lg:text-[36px] text-[22px] font-bold text-center">Estates</h1>
         <p className="max-w-[600px] lg:text-[16px] text-[14px] text-center mx-auto text-[#2d3954] lg:mb-[40px] mb-[20px]">
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos
           dolores
@@ -20,6 +22,8 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Testimonial></Testimonial>
+      <CallToAction></CallToAction>
     </div>
   );
 };
