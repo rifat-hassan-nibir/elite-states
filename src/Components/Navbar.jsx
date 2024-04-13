@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
-import { AiOutlineUser } from "react-icons/ai";
 import { LuUserCircle } from "react-icons/lu";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
