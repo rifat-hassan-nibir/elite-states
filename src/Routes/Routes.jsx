@@ -8,6 +8,7 @@ import EstateDetails from "../Pages/EstateDetails";
 import Blogs from "../Pages/Blogs";
 import BlogDetails from "../Components/HomePage/BlogDetails";
 import UpdateProfile from "../Pages/UpdateProfile";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Routes = createBrowserRouter([
   {
@@ -45,7 +46,11 @@ const Routes = createBrowserRouter([
       {
         path: "/estate-details/:id",
         loader: () => fetch("/estates-data.json"),
-        element: <EstateDetails></EstateDetails>,
+        element: (
+          <ProtectedRoute>
+            <EstateDetails></EstateDetails>
+          </ProtectedRoute>
+        ),
       },
     ],
   },

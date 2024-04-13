@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa";
+import { AiOutlineUser } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
@@ -55,25 +55,22 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-          <div tabIndex={0}>
-            <div>
-              <button onClick={handleLogOut} className="btn bg-primary rounded-sm text-white flex items-center gap-4">
-                <FaRegUser />
-                {user ? "Logout" : <Link to="/login">Login</Link>}
-              </button>
+        <div className="flex items-center gap-4">
+          {user && (
+            <div className="bg-primary p-2 rounded-full">
+              <AiOutlineUser className="bg-primary text-white text-[18px]" title="user" />
             </div>
+          )}
 
-            {/* <FaRegCircleUser className="text-[20px]" /> */}
-          </div>
-          {/* <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Item 2</a>
-            </li>
-          </ul> */}
+          {user ? (
+            <button onClick={handleLogOut} className="btn bg-primary rounded-sm text-white flex items-center gap-4">
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="btn bg-primary rounded-sm text-white flex items-center gap-4">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
