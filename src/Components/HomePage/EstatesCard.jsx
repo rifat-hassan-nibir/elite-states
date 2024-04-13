@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const EstatesCard = ({ estate }) => {
   const { id, estate_title, image, segment_name, description, price, status, area, location, facilities } = estate;
   return (
-    <div className="mx-auto rounded-lg shadow-md">
+    <div className="mx-auto rounded-lg bg-white">
       <div className="relative">
         <img src={image} className=" rounded-t-lg" />
         <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full absolute top-4">{segment_name}</p>

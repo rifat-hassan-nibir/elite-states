@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
@@ -8,7 +8,6 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
-  const navigate = useNavigate();
 
   const {
     register,
@@ -39,10 +38,12 @@ const Register = () => {
           photoURL: image,
         });
         console.log(result.user);
-        navigate("/");
+        // navigate("/");
+        toast.success("User created successfully");
       })
       .catch((error) => {
         console.log(error.message);
+        toast.error("Error !");
       });
   };
 

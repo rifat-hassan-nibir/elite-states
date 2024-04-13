@@ -9,7 +9,7 @@ const Navbar = () => {
   console.log(user);
 
   return (
-    <div className="navbar bg-base-100 p-0 ">
+    <div className="navbar bg-base-100 p-0 lg:max-w-[1140px] mx-auto py-3">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
