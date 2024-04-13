@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { AiOutlineUser } from "react-icons/ai";
+import { LuUserCircle } from "react-icons/lu";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
+  console.log(user);
 
   return (
     <div className="navbar bg-base-100 p-0 ">
@@ -43,25 +45,19 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
       <div className="navbar-end">
         <div>
           {user ? (
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="p-2 bg-primary rounded-full text-white flex items-center">
-                {user?.photoURL ? (
-                  <img src={user.photoURL} alt="" />
-                ) : (
-                  <AiOutlineUser className="bg-primary text-white text-[18px]" title="user" />
-                )}
-              </div>
-              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li>
-                  <a>User Profile</a>
-                </li>
-                <li>
-                  <a onClick={logOutUser}>Logout</a>
-                </li>
-              </ul>
+            <div className="flex items-center gap-3">
+              <button onClick={logOutUser} className="btn bg-primary rounded-sm text-white flex items-center gap-4">
+                Logout
+              </button>
+              {user?.photoURL ? (
+                <img src={user?.photoURL} className="size-8 rounded-full hover:cursor-pointer" title={user?.displayName} />
+              ) : (
+                <LuUserCircle className="text-black size-7  hover:cursor-pointer" title={user?.displayName} />
+              )}
             </div>
           ) : (
             <Link to="/login" className="btn bg-primary rounded-sm text-white flex items-center gap-4">

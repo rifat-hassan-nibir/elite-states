@@ -33,7 +33,11 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/update-profile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: (
+          <ProtectedRoute>
+            <UpdateProfile></UpdateProfile>
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/login",

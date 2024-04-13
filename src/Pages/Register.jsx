@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -13,11 +15,19 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const { email, password } = data;
+    const { name, image, email, password } = data;
+    console.log(name, image, email, password);
 
+    // Create user and update profile
     createUser(email, password)
       .then((result) => {
+        // Update profile
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: image,
+        });
         console.log(result.user);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -34,7 +44,6 @@ const Register = () => {
           </label>
           <input
             type="text"
-            name="name"
             id="name"
             placeholder="Name"
             {...register("name", { required: true })}
@@ -43,24 +52,23 @@ const Register = () => {
           {errors.name && <span className="text-red-400">This field is required</span>}
         </div>
         <div className="space-y-1 text-sm">
-          <label htmlFor="name" className="block text-gray-600">
+          <label htmlFor="photoURL" className="block text-gray-600">
             Photo URL
           </label>
           <input
             type="text"
-            name="photoURL"
             id="photoURL"
             placeholder="Photo URL"
+            {...register("image")}
             className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
           />
         </div>
         <div className="space-y-1 text-sm">
-          <label htmlFor="name" className="block text-gray-600">
+          <label htmlFor="email" className="block text-gray-600">
             Email
           </label>
           <input
             type="email"
-            name="email"
             id="email"
             placeholder="Email"
             {...register("email", { required: true })}
@@ -74,7 +82,6 @@ const Register = () => {
           </label>
           <input
             type="password"
-            name="password"
             id="password"
             placeholder="Password"
             {...register("password", { required: true })}

@@ -18,6 +18,7 @@ const Login = () => {
     const { email, password } = data;
     loginUser(email, password)
       .then((result) => {
+        console.log(result.user);
         if (result.user) {
           navigate(location?.state || "/");
         }

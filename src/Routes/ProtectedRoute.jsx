@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="text-center py-10">
+      <div className="text-center my-[100px]">
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     );
