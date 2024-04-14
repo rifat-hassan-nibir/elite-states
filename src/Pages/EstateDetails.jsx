@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineZoomOutMap } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 const EstateDetails = () => {
   const { id } = useParams();
@@ -14,6 +15,9 @@ const EstateDetails = () => {
 
   return (
     <div className="flex items-center mx-auto rounded-lg lg:max-w-[1000px]">
+      <Helmet>
+        <title>Elite States | Estate Details</title>
+      </Helmet>
       <div className="w-1/2">
         <img src={image} className="rounded-t-lg flex flex-col" />
       </div>

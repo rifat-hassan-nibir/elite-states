@@ -3,11 +3,15 @@ import Slider from "../Components/HomePage/Slider";
 import EstatesCard from "../Components/HomePage/EstatesCard";
 import Testimonial from "../Components/HomePage/Testimonial";
 import CallToAction from "../Components/HomePage/CallToAction";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const estates = useLoaderData();
   return (
     <div>
+      <Helmet>
+        <title>Elite States | Home</title>
+      </Helmet>
       <Slider></Slider>
       <div className="bg-[#F5FAFF] lg:py-[70px] py-[30px] lg:px-0 px-[15px]">
         <h1 className="lg:text-[36px] text-[22px] font-bold text-center">Estates</h1>

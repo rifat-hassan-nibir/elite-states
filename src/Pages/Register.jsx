@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
 
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -49,6 +50,9 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Elite States | Register</title>
+      </Helmet>
       <ToastContainer />
       <div className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800">
         <h1 className="text-2xl font-bold text-center">Register</h1>

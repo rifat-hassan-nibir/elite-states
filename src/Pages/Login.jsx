@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
@@ -54,6 +55,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Elite States | Login</title>
+      </Helmet>
       <ToastContainer />
       <div className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800">
         <h1 className="text-2xl font-bold text-center">Login</h1>
