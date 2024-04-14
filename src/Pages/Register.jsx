@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, reload, setReload } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
   const {
@@ -39,6 +39,8 @@ const Register = () => {
         updateProfile(result.user, {
           displayName: name,
           photoURL: image,
+        }).then(() => {
+          setReload(!reload);
         });
         console.log(result.user);
         // navigate("/");

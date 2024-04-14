@@ -16,6 +16,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [reload, setReload] = useState(false);
 
   // Create user
   const createUser = (email, password) => {
@@ -57,9 +58,9 @@ const AuthProvider = ({ children }) => {
     return () => {
       unSubscribe();
     };
-  }, []);
+  }, [reload]);
 
-  const authInfo = { user, createUser, loginUser, logOutUser, loading, googleLogin, githubLogin };
+  const authInfo = { user, createUser, loginUser, logOutUser, loading, googleLogin, githubLogin, reload, setReload };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
 

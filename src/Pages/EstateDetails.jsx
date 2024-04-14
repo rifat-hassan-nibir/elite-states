@@ -1,6 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
-import { MdOutlineZoomOutMap } from "react-icons/md";
 import { Helmet } from "react-helmet-async";
 
 const EstateDetails = () => {
