@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -29,9 +30,15 @@ const AuthProvider = ({ children }) => {
   };
 
   // Google login
-  const provider = new GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
   const googleLogin = () => {
-    return signInWithPopup(auth, provider);
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  // Github Login
+  const githubProvider = new GithubAuthProvider();
+  const githubLogin = () => {
+    return signInWithPopup(auth, githubProvider);
   };
 
   // Sign out user
@@ -52,7 +59,7 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const authInfo = { user, createUser, loginUser, logOutUser, loading, googleLogin };
+  const authInfo = { user, createUser, loginUser, logOutUser, loading, googleLogin, githubLogin };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
 
