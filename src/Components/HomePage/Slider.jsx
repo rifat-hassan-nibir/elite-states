@@ -15,11 +15,11 @@ import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
 const Slider = () => {
   return (
-    <>
+    <div>
       <div className="relative">
         <div className="flex justify-center">
           <div className="absolute z-10 top-[37%] text-center">
-            <h1 className="text-white lg:text-[50px] md:text-[] text-[24px] font-bold">Welcome to Elite States</h1>
+            <h1 className="text-white lg:text-[50px] md:text-[32px] text-[24px] font-bold">Welcome to Elite States</h1>
             <p className="text-white max-w-[700px] hidden lg:block">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis alias assumenda accusamus maiores qui, voluptatem
               rerum voluptates autem dicta eius ipsum doloribus at laborum exercitationem corporis hic modi ut.
@@ -43,17 +43,17 @@ const Slider = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src={Slide1} />
+            <img src={Slide1} className="w-full" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Slide2} />
+            <img src={Slide2} className="w-full" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Slide3} />
+            <img src={Slide3} className="w-full" />
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 

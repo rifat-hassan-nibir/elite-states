@@ -12,7 +12,7 @@ const EstatesCard = ({ estate }) => {
         <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full absolute top-4">{segment_name}</p>
       </div>
       {/* Text Contents */}
-      <div className="p-5 space-y-[14px]">
+      <div className="p-5 space-y-[12px]">
         <div className="flex items-center justify-between">
           <div className="space-y-2">
             <p className="capitalize text-[14px] text-white font-medium bg-primary inline-block px-3 rounded-full">{status}</p>
@@ -47,7 +47,7 @@ const EstatesCard = ({ estate }) => {
           <div className="text-right">
             <Link
               to={`/estate-details/${id}`}
-              className="bg-primary inline-block text-white text-[14px] font-semibold py-2 px-5 rounded-full"
+              className="bg-primary inline-block text-white text-[14px] font-semibold py-2 w-full mt-3 text-center rounded-full"
             >
               View Property
             </Link>
