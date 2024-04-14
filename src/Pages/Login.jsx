@@ -1,12 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import { FaRegEye } from "react-icons/fa6";
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -80,15 +83,20 @@ const Login = () => {
             <label htmlFor="password" className="block text-gray-600">
               Password
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              {...register("password", { required: true })}
-              className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
-            />
-            {errors.password && <span className="text-red-400">This field is required</span>}
+            <div className="relative flex items-center">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                placeholder="Password"
+                {...register("password", { required: true })}
+                className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
+              />
+              {errors.password && <span className="text-red-400">This field is required</span>}
+              <span className="absolute right-4 hover:cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </span>
+            </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Login</button>
         </form>

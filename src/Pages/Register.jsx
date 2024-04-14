@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
@@ -6,9 +6,11 @@ import { updateProfile } from "firebase/auth";
 
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -99,14 +101,19 @@ const Register = () => {
             <label htmlFor="password" className="block text-gray-600">
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              {...register("password", { required: true })}
-              className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
-            />
-            {errors.password && <span className="text-red-400">This field is required</span>}
+            <div className="relative flex items-center">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                placeholder="Password"
+                {...register("password", { required: true })}
+                className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
+              />
+              {errors.password && <span className="text-red-400">This field is required</span>}
+              <span className="absolute right-4 hover:cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </span>
+            </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Register</button>
         </form>
