@@ -27,7 +27,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="text-xl">
+        <Link to="/" className="text-xl font-bold">
           Elite States
         </Link>
       </div>

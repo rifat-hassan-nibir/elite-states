@@ -14,47 +14,53 @@ const EstateDetails = () => {
   const { estate_title, image, segment_name, description, price, status, area, location, facilities } = estate;
 
   return (
-    <div className="flex items-center mx-auto rounded-lg lg:max-w-[1000px]">
+    <div className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
       <Helmet>
         <title>Elite States | Estate Details</title>
       </Helmet>
-      <div className="w-1/2">
-        <img src={image} className="rounded-t-lg flex flex-col" />
-      </div>
-      {/* Text Contents */}
-      <div className="p-5 space-y-[16px] w-1/2">
-        <p className="capitalize bg-primary text-white text-[12px] px-3 py-1 rounded-r-full ">{segment_name}</p>
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="capitalize text-[14px] text-white font-medium bg-primary inline-block px-3 rounded-full mb-2">{status}</p>
-            <h3 className="text-[16px] font-bold">{estate_title}</h3>
-          </div>
-          <h2 className="text-primary lg:text-[20px] text-[18px] font-bold">{price}</h2>
+
+      <div className="lg:w-[700px]  mx-auto px-[12px] lg:px-0">
+        <div className="lg:py-[50px] py-[30px]">
+          <img src={image} className="w-full" />
         </div>
-        <hr />
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="text-[14px] text-[#4e5c79] mb-1 font-semibold">Facilities:</h4>
-            {facilities.map((facility, index) => (
-              <li className="capitalize ml-4 text-[14px] text-[#4e5c79]" key={index}>
-                {facility}
-              </li>
-            ))}
+        <div className="bg-white lg:p-8 p-5 rounded space-y-3">
+          <div className="flex justify-between items-center">
+            <p className="bg-primary inline-block px-4 py-1 rounded-full text-white capitalize text-[14px]">{status}</p>
+            <p className="bg-primary inline-block px-4 py-1 rounded-full text-white capitalize text-[14px]">{segment_name}</p>
           </div>
-          <div className="flex flex-col items-end">
-            <div className="flex items-center gap-2">
-              <MdOutlineZoomOutMap className="text-[14px] text-[#4e5c79]" />{" "}
-              <p className="text-[14px] text-[#4e5c79] font-medium">{area}</p>
+          <div className="flex justify-between items-center">
+            <div className="space-y-3">
+              <h3 className="text-[24px] font-bold">{estate_title}</h3>
+              <div className="flex items-center gap-2">
+                <CiLocationOn />
+                <p className="text-[14px]">{location}</p>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <CiLocationOn />
-              <p className="text-[14px] text-[#4e5c79] font-medium">{location}</p>
-            </div>
+            <h3 className="text-[24px] font-bold text-primary">{price}</h3>
           </div>
         </div>
-        <hr />
-        <div className="">
-          <p className="text-[14px] text-[#4e5c79]">{description}</p>
+        <div className="bg-white p-8 rounded  mt-4">
+          <div className="grid grid-cols-2">
+            <div className="space-y-3">
+              <p className="text-[16px] font-bold">Facilites</p>
+              {facilities.map((facility, index) => (
+                <p className="capitalize ml-5 text-[14px]" key={index}>
+                  {index + 1}. {facility}
+                </p>
+              ))}
+            </div>
+            <div>
+              <div className="space-y-3">
+                <p className="text-[16px] font-bold">Area</p>
+                <p className="text-[14px] ml-5">{area}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white p-8 rounded space-y-3 mt-4">
+          <p className="text-[16px] font-bold">Description</p>
+
+          <p className="text-[14px] ml-5">{description}</p>
         </div>
       </div>
     </div>
