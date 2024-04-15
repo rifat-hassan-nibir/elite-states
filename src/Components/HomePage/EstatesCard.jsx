@@ -8,7 +8,7 @@ const EstatesCard = ({ estate }) => {
   return (
     <div
       data-aos="fade-up"
-      data-aos-duration="1500"
+      data-aos-duration="1000"
       data-aos-delay={index * 500}
       data-aos-anchor="#estate-anchor"
       className="mx-auto rounded-lg bg-white"

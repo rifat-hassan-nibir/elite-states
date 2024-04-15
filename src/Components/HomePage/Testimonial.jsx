@@ -2,14 +2,14 @@ const Testimonial = () => {
   return (
     <section
       data-aos="fade-up"
-      data-aos-duration="1500"
+      data-aos-duration="1000"
       data-aos-anchor="#testimonial-anchor"
       className="relative text-gray-800 mb-[100px]"
     >
       {/* Anchor for animation */}
-      <div id="testimonial-anchor" className="absolute size-5 bg-green-400 right-0 lg:top-[25%] top-[5%]"></div>
+      <div id="testimonial-anchor" className="absolute right-0 lg:top-[25%] top-[5%]"></div>
       <div className="container flex flex-col items-center mx-auto mt-[50px] lg:mt-[100px] mb-[20px]">
-        <h1 className="lg:text-4xl text-[24px] font-semibold leading-none text-center">What our customers are saying about us</h1>
+        <h1 className="lg:text-[36px] text-[22px] font-semibold leading-none text-center">What our customers are saying about us</h1>
       </div>
       <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
         <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">

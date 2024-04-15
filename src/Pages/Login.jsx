@@ -64,7 +64,7 @@ const Login = () => {
       </Helmet>
       <div
         data-aos="flip-up"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
         className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800"
       >
         <h1 className="text-2xl font-bold text-center">Login</h1>

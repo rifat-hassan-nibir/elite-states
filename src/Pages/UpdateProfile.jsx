@@ -40,7 +40,7 @@ const UpdateProfile = () => {
       </Helmet>
       <div
         data-aos="flip-up"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
         className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800 mx-auto my-[30px] lg:my-[50px]"
       >
         <h1 className="text-2xl font-bold text-center">Update Profile</h1>

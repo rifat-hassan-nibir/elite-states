@@ -52,11 +52,13 @@ const Navbar = () => {
               <button onClick={logOutUser} className="btn bg-primary rounded-sm text-white flex items-center">
                 Logout
               </button>
-              {user?.photoURL ? (
-                <img src={user?.photoURL} className="size-8 rounded-full hover:cursor-pointer" title={user?.displayName} />
-              ) : (
-                <LuUserCircle className="text-black size-7  hover:cursor-pointer" title={user?.displayName} />
-              )}
+              <Link to="/user-profile">
+                {user?.photoURL ? (
+                  <img src={user?.photoURL} className="size-8 rounded-full hover:cursor-pointer" title={user?.displayName} />
+                ) : (
+                  <LuUserCircle className="text-black size-7  hover:cursor-pointer" title={user?.displayName} />
+                )}
+              </Link>
             </div>
           ) : (
             <Link to="/login" className="btn bg-primary rounded-sm text-white flex items-center gap-4">

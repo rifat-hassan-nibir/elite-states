@@ -9,6 +9,7 @@ import Blogs from "../Pages/Blogs";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ProtectedRoute from "./ProtectedRoute";
 import BlogDetails from "../Components/BlogDetails";
+import UserProfile from "../Pages/UserProfile";
 
 const Routes = createBrowserRouter([
   {
@@ -61,6 +62,14 @@ const Routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <EstateDetails></EstateDetails>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/user-profile",
+        element: (
+          <ProtectedRoute>
+            <UserProfile></UserProfile>
           </ProtectedRoute>
         ),
       },
