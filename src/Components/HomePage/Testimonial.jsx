@@ -19,8 +19,9 @@ const Testimonial = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              As a seasoned investor, I&apos;ve used many real estate websites, but Elite States stands out. The attention to detail in
+              property listings and the responsiveness of their support team truly sets them apart. A top-notch experience from start to
+              finish!
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="blue" className="absolute right-0 w-8 h-8 text-primary">
                 <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                 <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
@@ -33,8 +34,7 @@ const Testimonial = () => {
               alt=""
               className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-300"
             />
-            <p className="text-xl font-semibold leading-tight">Distinctio Animi</p>
-            <p className="text-sm uppercase">Aliquam illum</p>
+            <p className="text-xl font-semibold leading-tight">Sahar M</p>
           </div>
         </div>
         <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
@@ -44,8 +44,8 @@ const Testimonial = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              Elite States helped me find my dream home in record time. The intuitive search filters allowed me to narrow down my options
+              quickly, and the comprehensive property details gave me confidence in my decision. Couldn&apos;t be happier with the outcome!
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="blue" className="absolute right-0 w-8 h-8 text-primary">
                 <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                 <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
@@ -59,7 +59,6 @@ const Testimonial = () => {
               className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  bg-gray-300"
             />
             <p className="text-xl font-semibold leading-tight">Distinctio Animi</p>
-            <p className="text-sm uppercase">Aliquam illum</p>
           </div>
         </div>
         <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
@@ -69,8 +68,8 @@ const Testimonial = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              Elite States exceeded my expectations! The user-friendly interface made browsing for my new home a breeze. The diverse range
+              of properties ensured I found the perfect fit for my family. Highly recommend!
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="blue" className="absolute right-0 w-8 h-8 text-primary">
                 <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                 <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
@@ -94,8 +93,8 @@ const Testimonial = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              I was hesitant at first, but Elite States proved to be the ultimate solution for my real estate needs. The stunning visuals,
+              and informative content made my property hunt enjoyable. Thank you for simplifying the process!
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="blue" className="absolute right-0 w-8 h-8 text-primary">
                 <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                 <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>

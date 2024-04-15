@@ -10,7 +10,7 @@ const BlogDetails = () => {
   const { image, title, published_date, author_name, description } = post;
 
   return (
-    <div className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
+    <div data-aos="fade-up" data-aos-duration="1000" className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
       <Helmet>
         <title>Elite States | Post: {id}</title>
       </Helmet>

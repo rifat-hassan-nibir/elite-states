@@ -21,8 +21,8 @@ const Slider = () => {
           <div className="absolute z-10 top-[37%] text-center">
             <h1 className="text-white lg:text-[50px] md:text-[32px] text-[24px] font-bold">Welcome to Elite States</h1>
             <p className="text-white max-w-[700px] hidden lg:block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis alias assumenda accusamus maiores qui, voluptatem
-              rerum voluptates autem dicta eius ipsum doloribus at laborum exercitationem corporis hic modi ut.
+              Welcome to Elite States, your premier destination for luxury residential real estate. Discover unparalleled elegance and
+              sophistication in every property showcased on our platform.
             </p>
           </div>
         </div>

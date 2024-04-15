@@ -13,7 +13,7 @@ const EstateDetails = () => {
   const { estate_title, image, segment_name, description, price, status, area, location, facilities } = estate;
 
   return (
-    <div className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
+    <div data-aos="fade-up" data-aos-duration="1000" className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
       <Helmet>
         <title>Elite States | Estate Details</title>
       </Helmet>
