@@ -20,9 +20,9 @@ const EstateDetails = () => {
 
       <div className="lg:w-[700px]  mx-auto px-[12px] lg:px-0">
         <div className="lg:py-[50px] py-[30px]">
-          <img src={image} className="w-full" />
+          <img src={image} className="w-full rounded-lg" />
         </div>
-        <div className="bg-white lg:p-8 p-5 rounded space-y-3">
+        <div className="bg-white lg:p-8 p-5 rounded-lg space-y-3">
           <div className="flex justify-between items-center">
             <p className="bg-primary inline-block px-4 py-1 rounded-full text-white capitalize text-[14px]">{status}</p>
             <p className="bg-primary inline-block px-4 py-1 rounded-full text-white capitalize text-[14px]">{segment_name}</p>
@@ -38,7 +38,7 @@ const EstateDetails = () => {
             <h3 className="text-[24px] font-bold text-primary">{price}</h3>
           </div>
         </div>
-        <div className="bg-white p-8 rounded  mt-4">
+        <div className="bg-white p-8 rounded-lg mt-4">
           <div className="grid grid-cols-2">
             <div className="space-y-3">
               <p className="text-[16px] font-bold">Facilites</p>
@@ -56,9 +56,8 @@ const EstateDetails = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white p-8 rounded space-y-3 mt-4">
+        <div className="bg-white p-8 rounded-lg space-y-3 mt-4">
           <p className="text-[16px] font-bold">Description</p>
-
           <p className="text-[14px] ml-5">{description}</p>
         </div>
       </div>

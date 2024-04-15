@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { user, setReload, reload } = useContext(AuthContext);
@@ -33,6 +34,9 @@ const UpdateProfile = () => {
   };
   return (
     <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800 mx-auto my-[30px] lg:my-[50px]">
+      <Helmet>
+        <title>Elite States | Update Profile</title>
+      </Helmet>
       <ToastContainer />
       <h1 className="text-2xl font-bold text-center">Update Profile</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

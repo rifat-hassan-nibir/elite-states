@@ -83,22 +83,24 @@ const Login = () => {
             <label htmlFor="password" className="block text-gray-600">
               Password
             </label>
-            <div className="relative flex items-center">
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                id="password"
-                placeholder="Password"
-                {...register("password", { required: true })}
-                className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
-              />
+            <div>
+              <div className="relative flex items-center">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  {...register("password", { required: true })}
+                  className="w-full px-4 py-3 rounded-md input input-bordered border-gray-300 bg-gray-50 text-gray-800 focus:border-primary"
+                />
+                <span className="absolute right-4 hover:cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+                </span>
+              </div>
               {errors.password && <span className="text-red-400">This field is required</span>}
-              <span className="absolute right-4 hover:cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
-                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-              </span>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Login</button>
+          <button className="btn block w-full p-3 text-center rounded-sm text-gray-50 bg-primary">Login</button>
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
