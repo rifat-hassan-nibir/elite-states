@@ -18,7 +18,7 @@ const EstateDetails = () => {
         <title>Elite States | Estate Details</title>
       </Helmet>
 
-      <div className="lg:w-[700px]  mx-auto px-[12px] lg:px-0">
+      <div className="lg:w-[700px] mx-auto px-[12px] lg:px-0">
         <div className="lg:py-[50px] py-[30px]">
           <img src={image} className="w-full rounded-lg" />
         </div>
