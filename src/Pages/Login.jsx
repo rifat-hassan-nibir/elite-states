@@ -58,11 +58,15 @@ const Login = () => {
 
   return (
     <div>
+      <ToastContainer />
       <Helmet>
         <title>Elite States | Login</title>
       </Helmet>
-      <ToastContainer />
-      <div className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800">
+      <div
+        data-aos="flip-up"
+        data-aos-duration="1500"
+        className="w-full max-w-md mx-auto p-8 lg:my-[50px] space-y-3 rounded-xl bg-gray-50 text-gray-800"
+      >
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-1 text-sm">
