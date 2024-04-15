@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
@@ -10,6 +10,9 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
 
   const {
     register,
@@ -23,6 +26,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Login Successful");
+        {
+          navigate(location?.state ? location.state : "/");
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -58,7 +64,6 @@ const Login = () => {
 
   return (
     <div>
-      <ToastContainer />
       <Helmet>
         <title>Elite States | Login</title>
       </Helmet>

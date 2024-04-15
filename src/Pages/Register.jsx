@@ -1,16 +1,18 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
   const { createUser, reload, setReload } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -43,8 +45,8 @@ const Register = () => {
           setReload(!reload);
         });
         console.log(result.user);
-        // navigate("/");
         toast.success("User created successfully");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -54,7 +56,6 @@ const Register = () => {
 
   return (
     <div>
-      <ToastContainer />
       <Helmet>
         <title>Elite States | Register</title>
       </Helmet>

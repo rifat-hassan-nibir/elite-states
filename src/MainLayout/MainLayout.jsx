@@ -4,12 +4,14 @@ import Footer from "../Components/Footer";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { ToastContainer } from "react-toastify";
 // ..
 AOS.init();
 
 const MainLayout = () => {
   return (
     <div>
+      <ToastContainer />
       <div className="mx-auto">
         <Navbar></Navbar>
         <Outlet></Outlet>

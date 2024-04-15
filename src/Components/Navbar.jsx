@@ -27,9 +27,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="text-xl font-bold">
+        <NavLink to="/" className="text-xl font-bold">
           Elite States
-        </Link>
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center gap-6">

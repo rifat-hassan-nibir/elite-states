@@ -34,7 +34,6 @@ const UpdateProfile = () => {
   };
   return (
     <div>
-      <ToastContainer />
       <Helmet>
         <title>Elite States | Update Profile</title>
       </Helmet>
