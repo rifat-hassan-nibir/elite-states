@@ -32,16 +32,16 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/blogs">Blogs</NavLink>
-          </li>
-          <li>
-            <NavLink to="/update-profile">Update Profile</NavLink>
-          </li>
+        <ul className="menu menu-horizontal px-1 flex items-center gap-6">
+          <NavLink to="/" className={({ isActive }) => (isActive ? "bg-primary text-white px-2 py-1 rounded" : "")}>
+            Home
+          </NavLink>
+          <NavLink to="/blogs" className={({ isActive }) => (isActive ? "bg-primary text-white px-2 py-1 rounded" : "")}>
+            Blogs
+          </NavLink>
+          <NavLink to="/update-profile" className={({ isActive }) => (isActive ? "bg-primary text-white px-2 py-1 rounded" : "")}>
+            Update Profile
+          </NavLink>
         </ul>
       </div>
 
