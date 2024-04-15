@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 const Blogs = () => {
   const blogsData = useLoaderData();
   return (
-    <section className="text-gray-800">
+    <section className="text-gray-800 bg-[#F5FAFF] lg:py-[50px] py-[20px]">
       <Helmet>
         <title>Elite States | Blogs</title>
       </Helmet>

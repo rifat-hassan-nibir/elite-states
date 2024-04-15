@@ -23,12 +23,20 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/blogs",
-        element: <Blogs></Blogs>,
+        element: (
+          <ProtectedRoute>
+            <Blogs></Blogs>
+          </ProtectedRoute>
+        ),
         loader: () => fetch("/blogs-data.json"),
       },
       {
         path: "/blogs/:id",
-        element: <BlogDetails></BlogDetails>,
+        element: (
+          <ProtectedRoute>
+            <BlogDetails></BlogDetails>
+          </ProtectedRoute>
+        ),
         loader: () => fetch("/blogs-data.json"),
       },
       {
