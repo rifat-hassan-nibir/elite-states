@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import BlogsCard from "../Components/HomePage/BlogsCard";
+import BlogsCard from "../Components/BlogsCard";
 import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {

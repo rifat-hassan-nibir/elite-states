@@ -8,12 +8,11 @@ const BlogDetails = () => {
 
   const post = blogsData.find((blog) => blog.id === idInt);
   const { image, title, published_date, author_name, description } = post;
-  console.log(post);
 
   return (
     <div className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
       <Helmet>
-        <title>Elite States | Estate Details</title>
+        <title>Elite States | Post: {id}</title>
       </Helmet>
 
       <div className="lg:w-[700px] mx-auto px-[12px] lg:px-0">

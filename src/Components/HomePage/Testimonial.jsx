@@ -1,6 +1,6 @@
 const Testimonial = () => {
   return (
-    <section className="text-gray-800 mb-[100px]">
+    <section className="relative text-gray-800 mb-[100px]">
       <div className="container flex flex-col items-center mx-auto mt-[50px] lg:mt-[100px] mb-[20px]">
         <h1 className="lg:text-4xl text-[24px] font-semibold leading-none text-center">What our customers are saying about us</h1>
       </div>

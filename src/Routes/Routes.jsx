@@ -6,9 +6,9 @@ import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import EstateDetails from "../Pages/EstateDetails";
 import Blogs from "../Pages/Blogs";
-import BlogDetails from "../Components/HomePage/BlogDetails";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ProtectedRoute from "./ProtectedRoute";
+import BlogDetails from "../Components/BlogDetails";
 
 const Routes = createBrowserRouter([
   {
