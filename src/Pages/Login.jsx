@@ -12,7 +12,6 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
 
   const {
     register,
@@ -42,6 +41,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Google Login Successful");
+        {
+          navigate(location?.state ? location.state : "/");
+        }
       })
       .catch((error) => {
         console.log(error.message);
@@ -55,6 +57,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Github Login Successful");
+        {
+          navigate(location?.state ? location.state : "/");
+        }
       })
       .catch((error) => {
         console.log(error.message);

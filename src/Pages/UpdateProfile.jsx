@@ -24,7 +24,6 @@ const UpdateProfile = () => {
       photoURL: photoURL,
     })
       .then(() => {
-        console.log("Profile Updated");
         toast.success("Profile Updated successfully");
         setReload(!reload);
       })
