@@ -12,7 +12,7 @@ const BlogDetails = () => {
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="bg-[#F3F7FD] lg:pb-[50px] pb-[30px]">
       <Helmet>
-        <title>Elite States | Post: {id}</title>
+        <title>Elite States | {title}</title>
       </Helmet>
 
       <div className="lg:w-[700px] mx-auto px-[12px] lg:px-0">
