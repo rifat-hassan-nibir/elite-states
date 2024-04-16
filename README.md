@@ -1,8 +1,24 @@
-# React + Vite
+# Elite States
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Sites:
 
-Currently, two official plugins are available:
+- [https://elite-states.web.app](https://elite-states.web.app/)
+- [https://elite-states.netlify.app](https://elite-states.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key Features:
+
+- Slider on the homepage showing relevent images
+- Estates section showcases estates card with relevent information
+- Users can Register or Login to see the details of the estates
+- Login and Register page has Email and Password validation features
+- Users can also login using Google or Github account
+- After loggin in users can see their image on the navbar and a logout button
+- Users can see their information on the User Profile page which they can access by clicking on the user image on the navbar
+- Users can update their information in the Update Profile page
+- Blogs page contains relevent blogs which users can access by loggin in
+
+NPM packages used:
+
+- Animate On Scroll (AOS)
+- React Hook Form
+- Swiper Slider
