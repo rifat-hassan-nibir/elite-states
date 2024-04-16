@@ -14,7 +14,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <IoMdMenu className="text-[20px]" />
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex={0} className="menu menu-sm dropdown-content z-20 mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -26,9 +26,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <NavLink to="/" className="text-xl font-bold">
+        <Link to="/" className="text-xl font-bold">
           Elite States
-        </NavLink>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center gap-6">
